@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
-const {userBot} = require('./bot/bot');
+const { userBot } = require('./bot/bot');
 const createDefaultAdmin = require('./utils/createDefaultAdmin');
 dotenv.config();
 
@@ -29,7 +29,6 @@ app.listen(PORT, () => {
     console.log(`✅ Server ${PORT}-portda ishlayapti`);
 });
 
-
 const categoryRoutes = require('./routes/categoryRoutes');
 app.use('/api/v1/categories', categoryRoutes);
 
@@ -47,8 +46,5 @@ app.use('/api/v1/user', userRoutes);
 
 const adminRoutes = require('./routes/adminRoutes');
 app.use('/api/v1/admin', adminRoutes);
-
-
-
 
 createDefaultAdmin();
