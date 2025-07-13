@@ -58,11 +58,7 @@ jobs:
             cd /home/${{ secrets.SERVER_USER }}/mini-app
             npm install
             pm2 delete mini-app || true
-<<<<<<< HEAD
-            pm2 start backend/index.js --name mini-app
-=======
             pm2 start npm --name mini-app -- run start
->>>>>>> 8cf416a (image)
             pm2 save
 
       - name: Telegram Notify (Success)
