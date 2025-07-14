@@ -18,6 +18,7 @@ const storage = multer.diskStorage({
     },
 })
 
+
 module.exports = multer({ storage })
 
 // const multer = require('multer');
